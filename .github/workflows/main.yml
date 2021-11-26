@@ -11,14 +11,14 @@ jobs:
     steps:
     - name: Git checkout
       uses: actions/checkout@v2
-      # with:
-      #   fetch-depth: '0'
+      with:
+        fetch-depth: '0'
     - name: git
       run: |
         # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
-        # git --version
-        # git config user.name "GitHub Actions Bot"
-        # git config user.email "<>"
+        git --version
+        git config user.name "GitHub Actions Bot"
+        git config user.email "<>"
         git status
         echo "HELPHELP GEOGESGSLDG"
         git describe --abbrev=0 --tags
