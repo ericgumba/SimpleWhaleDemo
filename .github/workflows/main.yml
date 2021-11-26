@@ -12,9 +12,7 @@ jobs:
       - name: Set env
         with:
           fetch-depth: 0
-        run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "<>"
+        run: | 
           testing=$(git describe --abbrev=0 --tags)
           echo "RELEASE_VERSION=${testing}" >> $GITHUB_ENV
       - name: Test
