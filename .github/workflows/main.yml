@@ -19,8 +19,7 @@ jobs:
         git --version
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
-        git status
-        echo "Testing"
+        git status 
         tag_info=$(git describe --abbrev=0 --tags)
         echo $tag_info
         echo "RELEASE_TAG=${tag_info}" >> $GITHUB_ENV
@@ -30,14 +29,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set env 
-        run: | 
-          testing=$(git describe --abbrev=0 --tags)
-          echo "RELEASE_VERSION=${testing}" >> $GITHUB_ENV
+        run: |  
+          echo "RELEASE_VERSION" 
       - name: Test
         run: |
-          echo "love begins"
-          echo $RELEASE_VERSION
-          echo ${{ env.RELEASE_VERSION }}
+          echo "love begins" 
+          echo ${{ RELEASE_TAG }}
           echo "love ends"
   build:
     runs-on: ubuntu-latest
