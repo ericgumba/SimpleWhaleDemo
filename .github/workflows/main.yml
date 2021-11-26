@@ -34,7 +34,7 @@ jobs:
       - name: Test
         run: |
           echo "love begins" 
-          echo ${{ RELEASE_TAG }}
+          echo ${{ env.RELEASE_TAG }}
           echo "love ends"
   build:
     runs-on: ubuntu-latest
