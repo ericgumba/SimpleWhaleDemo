@@ -10,7 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set env
-        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+        run: |
+        testing=$(git describe --abbrev=0 --tags)
+        echo "RELEASE_VERSION=${testing}" >> $GITHUB_ENV
       - name: Test
         run: |
           echo "love begins"
