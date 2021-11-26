@@ -20,6 +20,7 @@ jobs:
         # git config user.name "GitHub Actions Bot"
         # git config user.email "<>"
         git status
+        git describe --abbrev=0 --tags
   test:
     runs-on: ubuntu-latest
     steps:
