@@ -1,1 +1,3 @@
-git tag -a v1.4 -m "my version 1.4"
+git add .
+git commit -m "test"
+git push origin master
