@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set env
+        with:
+          ref: master
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
