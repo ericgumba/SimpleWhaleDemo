@@ -23,6 +23,8 @@ jobs:
         tag_info=$(git describe --abbrev=0 --tags)
         echo $tag_info
         echo "RELEASE_TAG=${tag_info}" >> $GITHUB_ENV
+        echo "env stuff"
+        echo ${{ env.RELEASE_TAG }}
 
   test:
     runs-on: ubuntu-latest
