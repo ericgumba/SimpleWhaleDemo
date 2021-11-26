@@ -12,7 +12,9 @@ jobs:
       - name: Set env
         run: |
           testing=$(git describe --abbrev=0 --tags)
-          echo 'RELEASE_VERSION=$testing' >> $GITHUB_ENV
+          echo "currently testing stuff"
+          echo "currently testing ${testing}"
+          echo "RELEASE_VERSION=${testing}"" >> $GITHUB_ENV
       - name: Test
         run: |
           echo "love begins"
