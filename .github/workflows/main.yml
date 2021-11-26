@@ -20,7 +20,7 @@ jobs:
         git config user.name "GitHub Actions Bot"
         git config user.email "<>"
         git status
-        echo "HELPHELP GEOGESGSLDG"
+        echo "Testing"
         git describe --abbrev=0 --tags
   test:
     runs-on: ubuntu-latest
