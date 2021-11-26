@@ -11,8 +11,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set env
         run: |
-        testing=$(echo git describe --abbrev=0 --tags)
-        echo 'RELEASE_VERSION=testa' >> $GITHUB_ENV
+          testing=$(git describe --abbrev=0 --tags)
+          echo 'RELEASE_VERSION=$testing' >> $GITHUB_ENV
       - name: Test
         run: |
           echo "love begins"
